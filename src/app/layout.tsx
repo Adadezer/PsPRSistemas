@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import TailwindMaterialProvider from '@/providers/tailwindMaterial'
+import Header from './components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,9 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <TailwindMaterialProvider>
-        <body className={inter.className}>{children}</body>
-      </TailwindMaterialProvider>
+      
+        <body className={inter.className}>
+        <TailwindMaterialProvider>
+          <Header />
+          {children}
+        </TailwindMaterialProvider>  
+        </body>
     </html>
   )
 }
