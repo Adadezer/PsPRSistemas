@@ -22,7 +22,7 @@ function CardContactItem({contact}: CardContactItemProps) {
             <Avatar
               size="lg"
               variant="circular"
-              src={contact.photo}
+              src={contact.photo ? contact.photo : 'https://as1.ftcdn.net/v2/jpg/03/53/11/00/1000_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg'}
               alt="imagem contato"
             />
             <div className="flex w-full flex-col gap-0.5">
