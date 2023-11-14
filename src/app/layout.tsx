@@ -1,7 +1,7 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
 import TailwindMaterialProvider from '@/providers/tailwindMaterial'
-import Header from './components/Header'
+import Header from '../components/Header'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] })
 
