@@ -6,12 +6,13 @@ import { Button, Input } from '@material-tailwind/react'
 function SearchBar() {
   return (
     <>
-      <div className="container mx-auto relative flex w-1/2 gap-2 mt-5">
+      <div className="container mx-auto relative flex justify-center w-1/2 gap-2 mt-5">
         <Input
           type="search"
           color="white"
           label="Pesquise um contato"
-          className="pr-20 pb-7"
+          variant='outlined'
+          className="pb-7"
           containerProps={{ className: "min-w-[288px]" }}
           crossOrigin={undefined}
         />
