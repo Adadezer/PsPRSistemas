@@ -11,32 +11,31 @@ datasource db {
 }
 
 model Contact {
-  id String @id @default(uuid())
-  name String
-  nickname String
-  cpf String @unique
-  phone String
-  email String @unique
-  photo String
-  userId String?
-  user User? @relation(fields: [userId], references: [id])
+  id            String       @id @default(uuid())
+  name          String
+  nickname      String
+  cpf           String       @unique
+  phone         String
+  email         String       @unique
+  photo         String
+  userId        String?
+  user          User?        @relation(fields: [userId], references: [id])
   contactBookId String?
-  contactBook ContactBook? @relation(fields: [contactBookId], references: [id])
+  contactBook   ContactBook? @relation(fields: [contactBookId], references: [id])
 }
 
 model ContactBook {
-  id String @id @default(uuid())
+  id        String    @id @default(uuid())
   contactId String
-  userId String @unique
-  user User @relation(fields: [userId], references: [id])
-  name String
-  phone String
-  contacts Contact[]
+  userId    String    @unique
+  user      User      @relation(fields: [userId], references: [id])
+  name      String?
+  contacts  Contact[]
 }
 
 model User {
-  id String @id @default(uuid())
-  name String
-  contacts Contact[]
+  id           String       @id @default(uuid())
+  name         String
+  contacts     Contact[]
   contactBooks ContactBook?
 }
