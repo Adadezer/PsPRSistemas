@@ -143,7 +143,7 @@ async function main() {
           "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Omar Otaviano Ferminiano de Martines",
+        name: "Omar Otaviano Ferminiano",
         nickname: "oceano",
         cpf: "531.169.132-85",
         phone: "(85) 3175-0943",
@@ -178,7 +178,7 @@ async function main() {
           "https://images.unsplash.com/photo-1605993439219-9d09d2020fa5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Margarida Roberta Serrano de Valência",
+        name: "Margarida Roberta Serrano",
         nickname: "maflor",
         cpf: "220.265.772-00",
         phone: "(82) 3826-6515",
@@ -187,7 +187,7 @@ async function main() {
           "https://images.unsplash.com/photo-1619895862022-09114b41f16f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Antônio Kim Jimenes Vasques de Diniz",
+        name: "Antônio Kim Jimenes Vasques",
         nickname: "tonho",
         cpf: "485.508.891-99",
         phone: "(95) 2970-8498",
