@@ -7,11 +7,21 @@ import * as yup from "yup";
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
 
 const AddContactSchema = yup.object().shape({
-  name: yup.string().required("campo nome é obrigatório"),
+  name: yup.string().required("Campo nome é obrigatório"),
   nickname: yup.string(),
-  cpf: yup.string(),
-  phone: yup.string().required("campo telefone é obrigatório"),
-  email: yup.string().email()
+  cpf: yup
+    .string()
+    .nullable()
+    .test(
+      "len",
+      "campo não obrigatório, mas se preenchido deve conter 11 caracteres",
+      (val) => !val || val.length === 11
+    ),
+  phone: yup.string().required("Campo telefone é obrigatório").length(11),
+  email: yup
+    .string()
+    .email("campo não obrigatório, mas se preenchido deve ter o formato 'exemplo@email.com'")
+    .nullable(),
 });
 
 function AddContact() {
@@ -44,7 +54,7 @@ function AddContact() {
               {errors.nickname && <p>{errors.nickname.message}</p>}
             </div>
             <div>
-              <Input {...register("cpf")} size="lg" label="CPF" color="white" crossOrigin={undefined} />
+              <Input {...register("cpf")} size="lg" label="CPF" color="white" crossOrigin={undefined} type="number"/>
               {errors.cpf && <p>{errors.cpf.message}</p>}
             </div>
             <div>
