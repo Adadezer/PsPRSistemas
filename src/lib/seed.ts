@@ -40,7 +40,7 @@ async function main() {
       },
       {
         name: "Pedro Oliveira",
-        nickname: "Pedro",
+        nickname: "",
         cpf: "555.666.777-88",
         phone: "(55) 98765-4321",
         email: "pedro.oliveira@example.com",
@@ -57,7 +57,7 @@ async function main() {
       },
       {
         name: "Fernanda Almeida",
-        nickname: "Fernanda",
+        nickname: "Fer",
         cpf: "848.864.241-55",
         phone: "(77) 98765-4321",
         email: "fernanda.almeida@example.com",
@@ -66,7 +66,7 @@ async function main() {
       },
       {
         name: "Ricardo Silva",
-        nickname: "Ricardo",
+        nickname: "Rick",
         cpf: "222.333.444-55",
         phone: "(88) 12345-6789",
         email: "ricardo.silva@example.com",
@@ -93,7 +93,7 @@ async function main() {
       },
       {
         name: "Laura Lima",
-        nickname: "Laura",
+        nickname: "",
         cpf: "426.702.141-42",
         phone: "(11) 98765-4321",
         email: "laura.lima@example.com",
@@ -101,7 +101,7 @@ async function main() {
       },
       {
         name: "Eduardo Rodrigues",
-        nickname: "Eduardo",
+        nickname: "Edu",
         cpf: "666.777.888-99",
         phone: "(22) 12345-6789",
         email: "eduardo.rodrigues@example.com",
@@ -118,7 +118,7 @@ async function main() {
       },
       {
         name: "Ciro Dominato de Assunção",
-        nickname: "deputado",
+        nickname: "",
         cpf: "357.847.010-45",
         phone: "(71) 2628-5485",
         email: "ciro.domom@example.com",
@@ -134,17 +134,17 @@ async function main() {
         photo: "",
       },
       {
-        name: "Michele Marta Carrara de Duarte",
+        name: "Michele Carrara de Duarte",
         nickname: "",
         cpf: "743.837.280-49",
         phone: "(65) 2827-1544",
-        email: "mimata@example.com",
+        email: "micarrara@example.com",
         photo:
           "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         name: "Omar Otaviano Ferminiano",
-        nickname: "oceano",
+        nickname: "",
         cpf: "531.169.132-85",
         phone: "(85) 3175-0943",
         email: "omar@example.com",
@@ -152,11 +152,11 @@ async function main() {
           "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Leonardo Álvaro Ferraz Sobrinho",
+        name: "Leonardo Álvaro Ferraz",
         nickname: "Léo",
         cpf: "810.094.523-39",
         phone: "(63) 3773-8151",
-        email: "leo.sobrinho@example.com",
+        email: "leo.ferraz@example.com",
         photo: "",
       },
       {
@@ -196,11 +196,11 @@ async function main() {
           "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Thales Emanoel Ferraz de Madeira",
+        name: "Thales Emanoel Nobrega",
         nickname: "thales",
         cpf: "709.850.432-70",
         phone: "(97) 3164-7881",
-        email: "thales.madeira@example.com",
+        email: "thales.nobrega@example.com",
         photo:
           "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
