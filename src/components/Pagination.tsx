@@ -10,8 +10,9 @@ export function Pagination() {
   const getItemProps = (index: React.SetStateAction<number>) =>
     ({
       variant: active === index ? "filled" : "text",
-      color: "white",
+      color: "black",
       onClick: () => setActive(index),
+      className: "text-white"
     } as any);
  
   const next = () => {
@@ -27,7 +28,7 @@ export function Pagination() {
   };
  
   return (
-    <div className="flex items-center justify-center gap-4 my-7">
+    <div className="flex items-center justify-center gap-4 mt-12 mb-7">
       <Button
         variant="text"
         className="flex items-center gap-2 bg-primary"

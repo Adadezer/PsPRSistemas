@@ -15,7 +15,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-import { PlusIcon, PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { Cog6ToothIcon, PencilIcon, TrashIcon, IdentificationIcon } from "@heroicons/react/24/outline";
 
 interface CardContactItemProps {
   contact: Contact;
@@ -72,19 +72,24 @@ function CardContactItem({ contact }: CardContactItemProps) {
                   size="sm"
                   className="rounded-full bg-secondary border border-white"
                 >
-                  <PlusIcon className="h-5 w-5 transition-transform group-hover:rotate-45" />
+                  <Cog6ToothIcon className="h-4 w-4 transition-transform group-hover:rotate-45" />
                 </IconButton>
               </SpeedDialHandler>
 
               <SpeedDialContent className="flex-row">
                 <div className="text-sm font-normal text-white">Deletar</div>
-                <div className="p-2 bg-red-800 border border-none rounded-full text-white">
+                <div className="p-2 bg-red-800 border border-none rounded-full text-white mr-1">
                   <TrashIcon className="h-4 w-4" />
                 </div>
 
                 <div className="text-sm font-normal text-white">Editar</div>
-                <div className="p-2 bg-amber-800 border border-none rounded-full text-black flex flex-col items-center">
+                <div className="p-2 bg-amber-800 border border-none rounded-full text-black flex flex-col items-center mr-1">
                   <PencilIcon className="h-4 w-4" />
+                </div>
+
+                <div className="text-sm font-normal text-white">Detalhes</div>
+                <div className="p-2 bg-blue-800 border border-none rounded-full text-white flex flex-col items-center">
+                  <IdentificationIcon className="h-4 w-4" />
                 </div>
               </SpeedDialContent>
             </SpeedDial>
