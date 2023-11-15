@@ -49,7 +49,7 @@ function CardContactItem({ contact }: CardContactItemProps) {
           <Typography color="white">{contact.nickname}</Typography>
         </div>
       </CardHeader>
-      <CardBody className="flex mb-6 p-0">
+      <CardBody className="flex mb-6 p-0 text-gray-600">
         <div>
           <div className="flex flex-col ml-3">
             <div className="flex gap-2">
