@@ -17,7 +17,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-import { Cog6ToothIcon, PencilIcon, TrashIcon, IdentificationIcon } from "@heroicons/react/24/outline";
+import { Cog6ToothIcon, PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 interface CardContactItemProps {
   contact: Contact;
@@ -32,7 +32,7 @@ function CardContactItem({ contact }: CardContactItemProps) {
   };
 
   return (
-    <Card className="min-w-[24rem] bg-secondary shadow-sm shadow-gray-800 mt-5">
+    <Card className="min-w-[23rem] bg-secondary shadow-sm shadow-gray-800 mt-5">
       <CardHeader
         color="transparent"
         floated={false}
@@ -45,7 +45,7 @@ function CardContactItem({ contact }: CardContactItemProps) {
           src={
             contact.photo
               ? contact.photo
-              : "https://as1.ftcdn.net/v2/jpg/03/53/11/00/1000_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg"
+              : "/user_unknown.jpg"
           }
           alt="imagem contato"
         />
@@ -87,7 +87,7 @@ function CardContactItem({ contact }: CardContactItemProps) {
               </SpeedDialHandler>
 
               {openOptionsCard && (
-                <SpeedDialContent className="flex-row">
+                <SpeedDialContent className="flex-row cursor-pointer">
                   <div className="text-sm font-normal text-white">Deletar</div>
                   <div className="p-2 bg-red-800 border border-none rounded-full text-white mr-1">
                     <TrashIcon className="h-4 w-4" />

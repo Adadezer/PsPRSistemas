@@ -11,7 +11,7 @@ const getContacts =async () => {
 async function CardContact() {
   const data = await getContacts();
   return (
-    <div className="container mx-auto flex flex-wrap justify-around">
+    <div className="container mx-auto flex flex-wrap justify-evenly">
       {data.map((contact) => (
         <CardContactItem contact={contact}/>
       ))}
