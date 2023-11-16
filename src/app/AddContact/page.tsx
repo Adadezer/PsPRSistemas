@@ -17,7 +17,11 @@ const AddContactSchema = yup.object().shape({
       "campo não obrigatório, mas se preenchido deve conter 11 caracteres",
       (val) => !val || val.length === 11
     ),
-  phone: yup.string().required("Campo telefone é obrigatório").length(11),
+  phone: yup.string().required("Campo telefone é obrigatório").test(
+    "len",
+    "campo deve conter código do estado e telefone",
+    (val) => !val || val.length === 11
+  ),
   email: yup
     .string()
     .email("campo não obrigatório, mas se preenchido deve ter o formato 'exemplo@email.com'")

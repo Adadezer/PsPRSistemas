@@ -7,7 +7,7 @@ import React from 'react'
 function ButtonAddContact() {
   return (
     <div className="continer mx-auto flex justify-center mt-5">
-      <Link href={"/form/AddContact"}>
+      <Link href={"/AddContact"}>
         <div className="flex flex-col items-center">
           <Button color="green" className="px-7">
             <svg
