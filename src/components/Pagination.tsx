@@ -28,7 +28,7 @@ export function Pagination() {
   };
  
   return (
-    <div className="flex items-center justify-center gap-4 mt-12 mb-7">
+    <div className="container mx-auto flex justify-center gap-4 mt-12 mb-7">
       <Button
         variant="text"
         className="flex items-center gap-2 bg-primary"
@@ -36,7 +36,7 @@ export function Pagination() {
         onClick={prev}
         disabled={active === 1}
       >
-        <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" /> Previous
+        <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" />
       </Button>
       <div className="flex items-center gap-2">
         <IconButton {...getItemProps(1)}>1</IconButton>
@@ -52,7 +52,6 @@ export function Pagination() {
         onClick={next}
         disabled={active === 5}
       >
-        Next
         <ArrowRightIcon strokeWidth={2} className="h-4 w-4" />
       </Button>
     </div>
