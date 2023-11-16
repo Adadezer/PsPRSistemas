@@ -1,14 +1,12 @@
 import React from "react";
 import {
-  Button,
-  Dialog,
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
-  Input,
-  Checkbox,
+  Button,
+  Dialog,
+  MenuItem,
 } from "@material-tailwind/react";
 import { IdentificationIcon } from "@heroicons/react/24/outline";
 import { Contact } from "@prisma/client";
@@ -20,6 +18,23 @@ interface CardContactItemProps {
 export function DetailsContact({contact}: CardContactItemProps) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
+
+  const menuItems = [
+    {
+      field: "CPF",
+      description: `${contact.cpf}`
+    },
+    {
+      field: "TELEFONE",
+      description: `${contact.phone}`,
+    },
+    {
+      field: "EMAIL",
+      description:
+        `${contact.email}`,
+    },
+  ];
+
  
   return (
     <>
@@ -30,54 +45,68 @@ export function DetailsContact({contact}: CardContactItemProps) {
         </div>
       </div>
       <Dialog
-        size="xs"
+        size="md"
         open={open}
         handler={handleOpen}
-        className="bg-transparent shadow-none"
+        className="shadow-lg shadow-gray-800 rounded-2xl container mx-auto"
       >
-        <Card className="mx-auto w-full max-w-[24rem]">
-          <CardBody className="flex flex-col gap-4">
-            <Typography variant="h4" color="blue-gray">
-              Sign In
-            </Typography>
-            <Typography
-              className="mb-3 font-normal"
-              variant="paragraph"
-              color="gray"
-            >
-              Enter your email and password to Sign In.
-            </Typography>
-            <Typography className="-mb-2" variant="h6">
-              Your Email
-            </Typography>
-            <Input label="Email" size="lg" crossOrigin={undefined} />
-            <Typography className="-mb-2" variant="h6">
-              Your Password
-            </Typography>
-            <Input label="Password" size="lg" crossOrigin={undefined} />
-            <div className="-ml-2.5 -mt-3">
-              <Checkbox label="Remember Me" crossOrigin={undefined} />
-            </div>
-          </CardBody>
-          <CardFooter className="pt-0">
-            <Button variant="gradient" onClick={handleOpen} fullWidth>
-              Sign In
-            </Button>
-            <Typography variant="small" className="mt-4 flex justify-center">
-              Don&apos;t have an account?
-              <Typography
-                as="a"
-                href="#signup"
-                variant="small"
-                color="blue-gray"
-                className="ml-1 font-bold"
-                onClick={handleOpen}
-              >
-                Sign up
-              </Typography>
-            </Typography>
-          </CardFooter>
-        </Card>
+
+<Card className="w-full max-w-[48rem] flex-row bg-secondary">
+      <CardHeader
+        shadow={false}
+        floated={false}
+        className="m-0 w-2/5 shrink-0 rounded-r-none "
+      >
+        <img
+          src={
+            contact.photo
+              ? contact.photo
+              : "/user_unknown.jpg"
+          }
+          alt="card-image"
+          className="h-full w-full object-cover"
+        />
+      </CardHeader>
+      <CardBody className="w-full max-w-[14rem] lg:max-w-[23rem]">
+        <Typography variant="h3" className="font-bold">{contact.name}</Typography>
+        <div className="text-xl">{contact.nickname}</div>
+        <div className="mb-4 rounded-none border-b border-white/10 pt-4 text-center"></div>
+
+        <ul className="flex w-full flex-col mb-5 mt-0">
+          {menuItems.map(({ field, description }) => (
+              <>
+                <Typography variant="h6">
+                  {field}
+                </Typography>
+                <Typography
+                  variant="paragraph"
+                  className="font-normal mb-5 max-w-[20rem]"
+                >
+                  {description}
+                </Typography>
+              </>
+          ))}
+        </ul>
+
+        <Button className="bg-primary" onClick={handleOpen} fullWidth>
+          Fechar
+        </Button>
+      </CardBody>
+    </Card>
+        
+        {/* <img
+          className="w-full rounded-lg object-cover object-right-top h-44 mb-10"
+          src={
+            contact.photo
+              ? contact.photo
+              : "/user_unknown.jpg"
+          }
+          alt="nature image"
+        />
+        <Button variant="gradient" onClick={handleOpen} fullWidth>
+          Sign In
+        </Button> */}
+        
       </Dialog>
     </>
   );
