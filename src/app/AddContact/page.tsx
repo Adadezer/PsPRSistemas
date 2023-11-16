@@ -25,7 +25,12 @@ const AddContactSchema = yup.object().shape({
   email: yup
     .string()
     .email("campo não obrigatório, mas se preenchido deve ter o formato 'exemplo@email.com'")
-    .nullable(),
+    .nullable()
+    .test(
+      "len",
+      "campo não obrigatório, mas se preenchido deve conter no máximo 21 caracteres",
+      (val) => !val || val.length <= 21
+    )
 });
 
 function AddContact() {
