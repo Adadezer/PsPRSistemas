@@ -1,13 +1,15 @@
+import { Pagination } from '@/components/Pagination'
 import CardContact from './components/CardContact'
-import CrudButtons from './components/CrudButtons'
+import ButtonAddContact from './components/ButtonAddContact'
 import SearchBar from './components/SearchBar'
 
 export default function Home() {
   return (
     <>
       <SearchBar />
-      <CrudButtons />
+      <ButtonAddContact />
       <CardContact />
+      <Pagination />
     </>
   )
 }

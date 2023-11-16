@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import React from 'react'
-import CardContactItem from '@/components/CardContactItem';
+import CardContactItem from '@/app/components/CardContactItem';
 
 const getContacts =async () => {
   const contact = await prisma.contact.findMany({});

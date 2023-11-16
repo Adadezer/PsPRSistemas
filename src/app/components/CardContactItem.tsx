@@ -1,7 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Contact } from "@prisma/client";
+
+import { DetailsContact } from "./DetailsContact";
 
 import {
   Card,
@@ -15,13 +17,20 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-import { PlusIcon, PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { Cog6ToothIcon, PencilIcon, TrashIcon, IdentificationIcon } from "@heroicons/react/24/outline";
 
 interface CardContactItemProps {
   contact: Contact;
 }
 
 function CardContactItem({ contact }: CardContactItemProps) {
+
+  const [openOptionsCard, setOpenOptionsCard] = useState(false);
+
+  const toggleSpeedDial = () => {
+    setOpenOptionsCard(!openOptionsCard);
+  };
+
   return (
     <Card className="min-w-[24rem] bg-secondary shadow-sm shadow-gray-800 mt-5">
       <CardHeader
@@ -49,7 +58,7 @@ function CardContactItem({ contact }: CardContactItemProps) {
           <Typography color="white">{contact.nickname}</Typography>
         </div>
       </CardHeader>
-      <CardBody className="flex mb-6 p-0">
+      <CardBody className="flex mb-6 p-0 text-gray-600">
         <div>
           <div className="flex flex-col ml-3">
             <div className="flex gap-2">
@@ -66,27 +75,32 @@ function CardContactItem({ contact }: CardContactItemProps) {
 
         <div className="relative h-24 w-full">
           <div className="absolute bottom-0 right-0 mr-4">
-            <SpeedDial placement="left">
+            <SpeedDial placement="left" open={openOptionsCard}>
               <SpeedDialHandler>
                 <IconButton
                   size="sm"
                   className="rounded-full bg-secondary border border-white"
+                  onClick={toggleSpeedDial}
                 >
-                  <PlusIcon className="h-5 w-5 transition-transform group-hover:rotate-45" />
+                  <Cog6ToothIcon className="h-4 w-4 transition-transform group-hover:rotate-45" />
                 </IconButton>
               </SpeedDialHandler>
 
-              <SpeedDialContent className="flex-row">
-                <div className="text-sm font-normal text-white">Deletar</div>
-                <div className="p-2 bg-red-800 border border-none rounded-full text-white">
-                  <TrashIcon className="h-4 w-4" />
-                </div>
+              {openOptionsCard && (
+                <SpeedDialContent className="flex-row">
+                  <div className="text-sm font-normal text-white">Deletar</div>
+                  <div className="p-2 bg-red-800 border border-none rounded-full text-white mr-1">
+                    <TrashIcon className="h-4 w-4" />
+                  </div>
 
-                <div className="text-sm font-normal text-white">Editar</div>
-                <div className="p-2 bg-amber-800 border border-none rounded-full text-black flex flex-col items-center">
-                  <PencilIcon className="h-4 w-4" />
-                </div>
-              </SpeedDialContent>
+                  <div className="text-sm font-normal text-white">Editar</div>
+                  <div className="p-2 bg-amber-800 border border-none rounded-full text-black flex flex-col items-center mr-1">
+                    <PencilIcon className="h-4 w-4" />
+                  </div>
+
+                  <DetailsContact contact={contact}/>
+                </SpeedDialContent>
+              )}
             </SpeedDial>
           </div>
         </div>
