@@ -50,7 +50,7 @@ function CardContactItem({ contact }: CardContactItemProps) {
           alt="imagem contato"
         />
         <div className="flex w-full flex-col gap-0.5">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center">
             <Typography variant="h5" color="white">
               {contact.name}
             </Typography>
