@@ -43,8 +43,8 @@ async function CardContact(props: PageProps) {
   return (
     <>
       <div className="container mx-auto flex flex-wrap justify-evenly">
-        {data.map((contact, index) => (
-          <CardContactItem contact={contact} key={index}/>
+        {data.map((contact) => (
+          <CardContactItem contact={contact} key={contact.id}/>
           ))}
       </div>
 

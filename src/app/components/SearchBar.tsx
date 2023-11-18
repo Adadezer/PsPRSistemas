@@ -15,12 +15,16 @@ const SearchContactSchema = yup.object().shape({
 function SearchBar() {
   const router = useRouter();
 
-  const { handleSubmit, register, formState: {errors} } = useForm({
+  interface ContactSearchForm {
+    search: string;
+  }
+
+  const { handleSubmit, register, formState: {errors} } = useForm<ContactSearchForm>({
     resolver: yupResolver(SearchContactSchema)
   });
 
-  const onSubmit = (data: any) => {
-    router.push(`/search?text=${data.text}`);
+  const onSubmit = (data: ContactSearchForm) => {
+    router.push(`/search?search=${data.search}`);
   }
 
   return (
