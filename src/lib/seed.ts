@@ -12,11 +12,11 @@ async function main() {
           "https://plus.unsplash.com/premium_photo-1683121366070-5ceb7e007a97?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Maria Oliveira",
-        nickname: "Maria",
+        name: "Ana Luisa de Oliveira",
+        nickname: "Ana Lu",
         cpf: "987.654.321-00",
         phone: "(22) 12345-6789",
-        email: "maria.oliv@email.com",
+        email: "anaLu.oliv@email.com",
         photo:
           "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
@@ -47,8 +47,8 @@ async function main() {
         photo: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Luisa Rodrigues",
-        nickname: "Luisa",
+        name: "Luiza Rodrigues",
+        nickname: "Luiza",
         cpf: "999.888.777-66",
         phone: "(66) 12345-6789",
         email: "luisarodrig@email.com",
@@ -109,7 +109,7 @@ async function main() {
           "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Damares Maria Leon de Ortiz",
+        name: "Damares M. L. de Ortiz",
         nickname: "Daria",
         cpf: "010.881.100-02",
         phone: "(32) 3626-6386",
@@ -169,17 +169,17 @@ async function main() {
           "https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Ana Flores de Garcia",
-        nickname: "anaflo",
+        name: "Celina Galeno Garcia",
+        nickname: "Celina",
         cpf: "276.778.651-51",
         phone: "(85) 2335-9236",
-        email: "ana.garcia@email.com",
+        email: "cel.garcia@email.com",
         photo:
           "https://images.unsplash.com/photo-1605993439219-9d09d2020fa5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         name: "Margarida Roberta Serrano",
-        nickname: "maflor",
+        nickname: "Maflor",
         cpf: "220.265.772-00",
         phone: "(82) 3826-6515",
         email: "mar.serrano@email.com",
@@ -187,17 +187,17 @@ async function main() {
           "https://images.unsplash.com/photo-1619895862022-09114b41f16f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
-        name: "Antônio Kim Jimenes Vasques",
-        nickname: "tonho",
+        name: "Antônio Kim Jimenes Var",
+        nickname: "Tonho",
         cpf: "485.508.891-99",
         phone: "(95) 2970-8498",
-        email: "tonho.kim@email.com",
+        email: "tonho.var@email.com",
         photo:
           "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
       {
         name: "Thales Emanoel Nobrega",
-        nickname: "thales",
+        nickname: "Thales",
         cpf: "709.850.432-70",
         phone: "(97) 3164-7881",
         email: "tha.nobrega@email.com",
