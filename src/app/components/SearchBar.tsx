@@ -1,38 +1,46 @@
 'use client'
 
 import React from 'react'
-import { Button, Input } from '@material-tailwind/react'
+import { Input } from '@material-tailwind/react'
+import { useForm } from 'react-hook-form';
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useRouter } from 'next/navigation';
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+
+const SearchContactSchema = yup.object().shape({
+  search: yup.string().required("Campo obrigatório"),
+})
 
 function SearchBar() {
+  const router = useRouter();
+
+  const { handleSubmit, register, formState: {errors} } = useForm({
+    resolver: yupResolver(SearchContactSchema)
+  });
+
+  const onSubmit = (data: any) => {
+    router.push(`/search?text=${data.text}`);
+  }
+
   return (
-    <>
-      <div className="container mx-auto relative flex justify-center w-1/2 gap-2 mt-5">
+    <div className="container mx-auto relative w-1/2 mt-5">
+      <div className="flex gap-2 items-center justify-center">
         <Input
-          type="search"
+          size="lg"
           color="white"
-          label="Pesquise um contato"
-          variant='outlined'
-          className="pb-7"
-          containerProps={{ className: "min-w-[288px]" }}
+          label="Digite um contato"
+          containerProps={{ className: "min-w-[289px]" }}
           crossOrigin={undefined}
+          {...register("search")}
         />
-        <Button className="flex items-center bg-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-5 h-5"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </Button>
+        <div onClick={() => handleSubmit(onSubmit)()} className="bg-primary py-2.5 px-5 rounded-md cursor-pointer">
+          <MagnifyingGlassIcon className="h-6 w-6" />
+        </div>
       </div>
-    </>
+      {errors.search && (<p className="text-red-300 text-sm">{errors.search.message}</p>)}
+    </div>
   );
 }
 
-export default SearchBar
+export default SearchBar;
