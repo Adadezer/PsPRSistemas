@@ -1,5 +1,4 @@
 import CardContact from './components/CardContact'
-import ButtonAddContact from './components/ButtonAddContact'
 import SearchBar from './components/SearchBar'
 
 export type PageProps = {
@@ -11,7 +10,6 @@ export default function Home(props: PageProps) {
   return (
     <>
       <SearchBar />
-      <ButtonAddContact />
       <CardContact {...props} />
     </>
   )

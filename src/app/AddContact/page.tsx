@@ -55,7 +55,7 @@ function AddContact() {
           Adicione um contato
         </Typography>
 
-        <Typography className="mt-1 mx-2 lg:mx-0 font-normal text-center text-gray-600">
+        <Typography className="mt-1 mx-2 lg:mx-0 font-normal text-center text-gray-400">
           Preencha os campos e depois clique em adicionar contato
         </Typography>
 
