@@ -31,7 +31,7 @@ Sugestões:
 - PrismaORM
 - Postgresql
 
-[acesse este link](https://ps-pr-sistemas.vercel.app/) para ver a aplicação 
+<a href="https://ps-pr-sistemas.vercel.app//" target="_blank">Hello, world!</a>
 
 
 ## ⚙️ Como Utilizar
