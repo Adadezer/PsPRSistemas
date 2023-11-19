@@ -31,6 +31,9 @@ Sugestões:
 - PrismaORM
 - Postgresql
 
+[acesse este link](https://ps-pr-sistemas.vercel.app/) para ver a aplicação 
+
+
 ## ⚙️ Como Utilizar
 
 1- Abra o terminal, clone o projeto e entre em sua pasta:
