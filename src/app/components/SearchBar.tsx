@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useRouter } from 'next/navigation';
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import ButtonAddContact from './ButtonAddContact';
 
 const SearchContactSchema = yup.object().shape({
   search: yup.string().required("Campo obrigatório"),
@@ -28,21 +29,29 @@ function SearchBar() {
   };
 
   return (
-    <div className="container mx-auto w-3/4 lg:w-1/2 mt-5">
-       <div className="relative gap-2">
-        <Input size="lg"
-          color="white"
-          label="Digite um contato"
-          containerProps={{ className: "min-w-0" }}
-          crossOrigin={undefined}
-          {...register("search")}
-        />
-        <MagnifyingGlassIcon
-          onClick={() => handleSubmit(onSubmit)()}
-          className="h-6 w-6 cursor-pointer !absolute right-2 top-2 text-gray-500"
-        />
-       </div>
-      {errors.search && (<p className="text-red-300 text-sm">{errors.search.message}</p>)}
+    <div className="container mx-auto w-3/4 lg:w-1/2 mt-6 mb-4">
+      <div className="flex">
+        <div className="w-full">
+          <div className="relative gap-2">
+            <Input
+              size="lg"
+              color="white"
+              label="Digite um contato"
+              containerProps={{ className: "min-w-0" }}
+              crossOrigin={undefined}
+              {...register("search")}
+            />
+            <MagnifyingGlassIcon
+              onClick={() => handleSubmit(onSubmit)()}
+              className="h-6 w-6 cursor-pointer !absolute right-2 top-2 text-gray-500"
+            />
+          </div>
+        </div>
+        <ButtonAddContact />
+      </div>
+      {errors.search && (
+        <p className="text-red-300 text-xs">{errors.search.message}</p>
+      )}
     </div>
   );
 }
