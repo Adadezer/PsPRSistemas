@@ -33,6 +33,13 @@ const AddContactSchema = yup.object().shape({
     )
 });
 
+const removeArrowImputNumber = `
+  [appearance:textfield]
+  [&::-webkit-outer-spin-button]:appearance-none
+  [&::-webkit-inner-spin-button]:appearance-none
+  [moz-appearance: textfield;]
+`
+
 function AddContact() {
 
   const { register, handleSubmit, formState: { errors } } = useForm({
@@ -52,29 +59,66 @@ function AddContact() {
           Preencha os campos e depois clique em adicionar contato
         </Typography>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="mt-8 mb-2 w-64 sm:w-96">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="mt-8 mb-2 w-64 sm:w-96"
+        >
           <div className="mb-1 flex flex-col gap-4">
             <div className="bg-transparent">
-              <Input {...register("name")} size="lg" label="Nome" color="white" crossOrigin={undefined} />
-              {errors.name && <p className="text-red-300 pl-2 text-sm">{errors.name.message}</p>}
+              <Input
+                {...register("name")}
+                size="lg"
+                label="Nome"
+                color="white"
+                crossOrigin={undefined}
+              />
+              {errors.name && (<p className="text-red-300 pl-2 text-sm">{errors.name.message}</p>)}
             </div>
             <div>
-              <Input {...register("nickname")} size="lg" label="Apelido" color="white" crossOrigin={undefined} />
+              <Input
+                {...register("nickname")}
+                size="lg"
+                label="Apelido"
+                color="white"
+                crossOrigin={undefined}
+              />
               {errors.nickname && <p>{errors.nickname.message}</p>}
             </div>
             <div>
-              <Input {...register("cpf")} size="lg" label="CPF" color="white" crossOrigin={undefined} type="number"/>
+              <Input
+                type="number"
+                {...register("cpf")}
+                label="CPF"
+                size="lg"
+                color="white"
+                className={removeArrowImputNumber}
+                crossOrigin={undefined}
+              />
               {errors.cpf && <p>{errors.cpf.message}</p>}
             </div>
             <div>
-              <Input {...register("phone")} size="lg" label="Telefone" color="white" crossOrigin={undefined} type="number" />
-              {errors.phone && <p className="text-red-300 pl-2 text-sm">{errors.phone.message}</p>}
+              <Input
+                {...register("phone")}
+                size="lg"
+                label="Telefone"
+                color="white"
+                crossOrigin={undefined}
+                type="number"
+                className={removeArrowImputNumber}
+              />
+              {errors.phone && (<p className="text-red-300 pl-2 text-sm">{errors.phone.message}</p>)}
             </div>
             <div>
-              <Input {...register("email")} size="lg" label="Email" color="white" crossOrigin={undefined} />
+              <Input
+                {...register("email")}
+                size="lg"
+                label="Email"
+                color="white"
+                crossOrigin={undefined}
+              />
               {errors.email && <p>{errors.email.message}</p>}
             </div>
-            <Button className="mt-10" fullWidth color="green" type="submit"> Adicionar contato</Button>
+            <Button className="mt-10" fullWidth color="green" type="submit">Adicionar contato</Button>
           </div>
         </form>
       </Card>
