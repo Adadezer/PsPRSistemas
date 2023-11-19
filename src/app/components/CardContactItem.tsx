@@ -58,7 +58,7 @@ function CardContactItem({ contact }: CardContactItemProps) {
           <Typography color="white">{contact.nickname}</Typography>
         </div>
       </CardHeader>
-      <CardBody className="flex mb-6 p-0 text-gray-600">
+      <CardBody className="flex mb-6 p-0 text-gray-400">
         <div>
           <div className="flex flex-col ml-3">
             <div className="flex gap-2">
@@ -78,11 +78,11 @@ function CardContactItem({ contact }: CardContactItemProps) {
             <SpeedDial placement="left" open={openOptionsCard}>
               <SpeedDialHandler>
                 <IconButton
-                  size="sm"
-                  className="rounded-full bg-secondary border border-white"
+                  // size="sm"
+                  className="rounded-full bg-secondary text-gray-400"
                   onClick={toggleSpeedDial}
                 >
-                  <Cog6ToothIcon className="h-4 w-4 transition-transform group-hover:rotate-45" />
+                  <Cog6ToothIcon className="h-8 w-8 transition-transform group-hover:rotate-45" />
                 </IconButton>
               </SpeedDialHandler>
 
