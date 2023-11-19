@@ -63,7 +63,7 @@ export function DetailsContact({contact}: CardContactItemProps) {
               fill
             />
           </CardHeader>
-          <CardBody className="w-full max-w-[14rem] lg:max-w-[23rem]">
+          <CardBody className="w-full max-w-[14rem] lg:max-w-[23rem] text-gray-400">
             <Typography variant="h3" className="font-bold">
               {contact.name}
             </Typography>
