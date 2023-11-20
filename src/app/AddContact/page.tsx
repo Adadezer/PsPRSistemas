@@ -47,7 +47,7 @@ function AddContact() {
     resolver: yupResolver(AddContactSchema)
   });
 
-  const onSubmit = (data: any) => { 
+  const onSubmit = () => { 
     toast.success("Contato adicionado com sucesso!", { position: "top-center", theme: "dark" })
   };
 
