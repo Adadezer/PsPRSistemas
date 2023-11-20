@@ -29,7 +29,7 @@ function FoundContact() {
           <CardContactItem contact={contact} key={contact.id} />
         ))
       ) : (
-        <div>No contacts found</div>
+        <div className="mt-5">{"Nenhum contato encontrado =("}</div>
       )}
     </div>
   );
