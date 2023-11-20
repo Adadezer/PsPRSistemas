@@ -1,7 +1,7 @@
 # Processo Seletivo Pr Sistemas
 
 ## 🌐 O que é a Aplicação
-Desafio técnico desenvolvido para o processo seletivo da PrSistemas.
+Desafio técnico desenvolvido para o processo seletivo da Pr Sistemas.
 
 A aplicação consiste em desenvolver um template para uma agenda de contatos com as seguintes informações:
 
@@ -47,9 +47,9 @@ Ou segure `Ctrl` e click no link para abrir em uma nova aba e não sair dessa p�
  
  - `cd PsPRSistemas`
 
-2- Execute o comando `npm install` para instalar pacotes e dependências do teste:
+2- Execute o comando `npm install` para instalar pacotes e dependências:
 
-3- O teste usa o postgresql como banco de dados, crie um banco de dados com qualquer nome no postgresql.
+3- A aplicação usa o postgresql como banco de dados, crie um banco de dados com qualquer nome ('psprsistemas' por exemplo) no postgresql.
 
 4- Configure a variável de ambiente:
 
@@ -58,7 +58,7 @@ Ou segure `Ctrl` e click no link para abrir em uma nova aba e não sair dessa p�
 
 Na pasta existe um arquivo chamado `.env.example` com um exemplo de como deve ser preenchido.
 
-5- Execute o comando `npx prisma migrate reset` para o programa popular automaticamente o banco de dados com informações de contatos fictícios. Logo após executar o comando, uma mensagem de confirmação será exibida, dizendo que o banco de dados será resetado e as informações contidas nele serão perdidas, escolha sim para continuar.
+5- Execute o comando `npx prisma migrate reset` para o banco de dados ser populado automaticamente com informações de contatos fictícios. Logo após executar o comando, uma mensagem de confirmação será exibida, dizendo que o banco de dados será resetado e as informações contidas nele serão perdidas, escolha sim para continuar.
 
 Obs: Como o banco acabou de ser criado e está vazio, não tem problema realizar esse passo, caso o comando seja executado novamente, os dados serão perdidos.
 
@@ -67,5 +67,6 @@ Obs: Como o banco acabou de ser criado e está vazio, não tem problema realizar
 ## 📌 Considerações
 Não é possivel editar, adicionar, ou deletar um contato.
 
-O foco do teste está mais em seu layout do que em sua funcionalidade.
+O foco deste teste técnico está mais em seu layout do que em sua funcionalidade.
+
 Futuramente essas e outras funcionalidades poderão ser implementadas caso pedido.
