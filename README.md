@@ -1,4 +1,4 @@
-# Processo Seletivo PrSistemas
+# Processo Seletivo Pr Sistemas
 
 ## 🌐 O que é a Aplicação
 Desafio técnico desenvolvido para o processo seletivo da PrSistemas.
