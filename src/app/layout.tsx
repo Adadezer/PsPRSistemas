@@ -2,6 +2,7 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import TailwindMaterialProvider from '@/providers/tailwindMaterial'
 import Header from '../components/Header'
+import ToastProvider from '@/providers/toast'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] })
 
@@ -17,13 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      
-        <body className={poppins.className}>
-        <TailwindMaterialProvider>
-          <Header />
-          {children}
-        </TailwindMaterialProvider>  
-        </body>
+      <body className={poppins.className}>
+        <ToastProvider>
+          <TailwindMaterialProvider>
+            <Header />
+            {children}
+          </TailwindMaterialProvider>
+        </ToastProvider>
+      </body>
     </html>
-  )
+  );
 }

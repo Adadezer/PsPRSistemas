@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
+import { toast } from "react-toastify";
 
 const AddContactSchema = yup.object().shape({
   name: yup.string().required("Campo nome é obrigatório"),
@@ -46,7 +47,10 @@ function AddContact() {
     resolver: yupResolver(AddContactSchema)
   });
 
-  const onSubmit = (data: any) => { alert(JSON.stringify(data)) };
+  // const onSubmit = (data: any) => { alert(JSON.stringify(data)) };
+  const onSubmit = (data: any) => { 
+    toast.success("Contato adicionado com sucesso!", { position: "top-center", theme: "dark" })
+  };
 
   return (
     <div className="container mx-auto my-7 lg:w-1/2">
