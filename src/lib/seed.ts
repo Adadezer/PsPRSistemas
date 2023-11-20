@@ -204,6 +204,15 @@ async function main() {
         photo:
           "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       },
+      {
+        name: "Beatriz Albuquerque Costa",
+        nickname: "Bia",
+        cpf: "753.139.608-23",
+        phone: "(11) 5979-5559",
+        email: "bia.costa@email.com",
+        photo:
+          "https://images.unsplash.com/photo-1574701148212-8518049c7b2c?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
     ],
   });
 }
