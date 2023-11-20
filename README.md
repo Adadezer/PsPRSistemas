@@ -31,13 +31,17 @@ Sugestões:
 - PrismaORM
 - Postgresql
 
-<a href="https://ps-pr-sistemas.vercel.app/" target="_blank" rel="noopener noreferrer">Hello, world!</a>
 
+# 🖥️ Aplicação
+Acesse a aplicação <a href="https://ps-pr-sistemas.vercel.app/" target="_blank" rel="noopener noreferrer">clicando aqui</a>
 
+Clique com o botão direito do mouse no link e escolha a opção "Abrir link em uma nova aba/janela".
+
+Ou segure `Ctrl` e click no link para abrir em uma nova aba e não sair dessa página.
 
 ## ⚙️ Como Utilizar
 
-1- Abra o terminal, clone o projeto e entre em sua pasta:
+1- Para rodar a aplicação localmente, abra o terminal, clone o projeto e entre em sua pasta:
 
  - `https://github.com/Adadezer/PsPRSistemas.git` ou `git@github.com:Adadezer/PsPRSistemas.git`
  
@@ -59,3 +63,9 @@ Na pasta existe um arquivo chamado `.env.example` com um exemplo de como deve se
 Obs: Como o banco acabou de ser criado e está vazio, não tem problema realizar esse passo, caso o comando seja executado novamente, os dados serão perdidos.
 
 6- Execute o comando `npm run dev` , uma aba no navegador será aberta automaticamente, e iniciará a aplicação.
+
+## 📌 Considerações
+Não é possivel editar, adicionar, ou deletar um contato.
+
+O foco do teste está mais em seu layout do que em sua funcionalidade.
+Futuramente essas e outras funcionalidades poderão ser implementadas caso pedido.
