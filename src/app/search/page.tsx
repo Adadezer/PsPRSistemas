@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { Contact } from '@prisma/client';
 import { useSearchParams } from 'next/navigation';
 import CardContactItem from '../components/CardContactItem';
-import axios from 'axios';
 
 function FoundContact() {
   const [contacts, setContacts] = useState<Contact[]>([]);
@@ -12,13 +11,15 @@ function FoundContact() {
   
  
   useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await axios.get(`/api/contacts/search?search=${searchParams.get("search")}`);
+    const fetchContacts = async () => {
+      const response = await fetch(`/api/contacts/search?search=${searchParams.get("search")}`);
+
+      const data = await response.json();
 
       setContacts(data);
     };
   
-    fetchData();
+    fetchContacts();
   }, [contacts, searchParams]);
 
   return (

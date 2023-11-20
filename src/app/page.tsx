@@ -1,7 +1,7 @@
 import CardContact from './components/CardContact'
 import SearchBar from './components/SearchBar'
 
-export type PageProps = {
+export interface PageProps {
 	params: { [key: string]: string | string[] | undefined };
 	searchParams?: { [key: string]: string | string[] | undefined };
 };

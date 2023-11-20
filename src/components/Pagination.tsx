@@ -3,7 +3,7 @@ import { ArrowLongRightIcon, ArrowLongLeftIcon } from "@heroicons/react/24/outli
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
-type PaginationProps = {
+interface PaginationProps {
 	page?: string;
 	totalPages: number;
 	hasNextPage: boolean;
