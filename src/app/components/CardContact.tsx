@@ -5,9 +5,7 @@ import { PageProps } from '../page';
 import { revalidatePath } from 'next/cache';
 import { Pagination } from '@/components/Pagination';
 
-export type FetchFeedType = typeof fetchFeed;
-
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 10;
 
 const fetchFeed = async ({take = PAGE_SIZE, skip = 0}) => {
 
