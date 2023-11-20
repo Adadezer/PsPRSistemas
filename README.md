@@ -31,7 +31,8 @@ Sugestões:
 - PrismaORM
 - Postgresql
 
-<a href="https://ps-pr-sistemas.vercel.app//" target="_blank">Hello, world!</a>
+<a href="https://ps-pr-sistemas.vercel.app/" target="_blank" rel="noopener noreferrer">Hello, world!</a>
+
 
 
 ## ⚙️ Como Utilizar
