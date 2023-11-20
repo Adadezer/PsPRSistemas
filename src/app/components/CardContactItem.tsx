@@ -78,7 +78,6 @@ function CardContactItem({ contact }: CardContactItemProps) {
             <SpeedDial placement="left" open={openOptionsCard}>
               <SpeedDialHandler>
                 <IconButton
-                  // size="sm"
                   className="rounded-full bg-secondary text-gray-400"
                   onClick={toggleSpeedDial}
                 >
