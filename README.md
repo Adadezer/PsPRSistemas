@@ -33,7 +33,7 @@ Sugestões:
 
 
 # 🖥️ Aplicação
-Acesse a aplicação <a href="https://ps-pr-sistemas.vercel.app/" target="_blank" rel="noopener noreferrer">clicando aqui</a>
+Acesse a aplicação <a href="https://agenda-contatos-three-cyan.vercel.app/" target="_blank" rel="noopener noreferrer">clicando aqui</a>
 
 Clique com o botão direito do mouse no link e escolha a opção "Abrir link em uma nova aba/janela".
 
